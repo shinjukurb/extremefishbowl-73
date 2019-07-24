@@ -34,9 +34,9 @@ class Game
     when ROKUZORO
       return "win"
     when HIFUMI
-      return "win"
+      return "lose"
     when SHIGORO
-      return "loose"
+      return "win"
     else
       deme = demes.combination(2).select{|a,b| a == b}.flatten
       nokorideme = demes - deme
