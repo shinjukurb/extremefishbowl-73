@@ -12,13 +12,11 @@ class Game
 
   def main
     result = roll
-    puts asset(result)
+    puts assert(result)
   end
 
   def roll
-    deme1 = Dice.roll
-    deme2 = Dice.roll
-    deme3 = Dice.roll
+    3.times.map{|_i| Dice.roll}
   end
 
   def assert(demes)
@@ -40,7 +38,7 @@ class Game
     when SHIGORO
       return "loose"
     else
-      deme = demes.combination(2).select{|a,b| a == b}.flatten.first
+      deme = demes.combination(2).select{|a,b| a == b}.flatten
       nokorideme = demes - deme
 
       if nokorideme == 1
@@ -53,8 +51,10 @@ class Game
         return "deme4"
       elsif nokorideme == 5
         return "deme5"
-      else
+      elsif nokorideme == 6
         return "deme6"
+      else
+        "lose"
       end
 
 
