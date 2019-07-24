@@ -31,7 +31,9 @@ class Game
     when HIFUMI
     when SHIGORO
     else
-
+      
+      if demes.uniq.size == 2
+      end
     end
   end
 end
