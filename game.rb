@@ -39,7 +39,7 @@ class Game
       return "win"
     else
       deme = demes.combination(2).select{|a,b| a == b}.flatten
-      nokorideme = demes - deme
+      nokorideme = (demes - deme).first
 
       if nokorideme == 1
         return "deme1"
