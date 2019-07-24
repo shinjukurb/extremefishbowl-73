@@ -12,7 +12,7 @@ class Game
 
   def main
     result = roll
-    asset(result)
+    puts asset(result)
   end
 
   def roll
@@ -41,11 +41,23 @@ class Game
       return "loose"
     else
       deme = demes.combination(2).select{|a,b| a == b}.flatten.first
-      if deme == 1
-        return "loose"
+      nokorideme = demes - deme
+
+      if nokorideme == 1
+        return "deme1"
+      elsif nokorideme == 2
+        return "deme2" 
+      elsif nokorideme == 3
+        return "deme3"
+      elsif nokorideme == 4
+        return "deme4"
+      elsif nokorideme == 5
+        return "deme5"
       else
-      if demes.uniq.size == 2
+        return "deme6"
       end
+
+
     end
   end
 end
