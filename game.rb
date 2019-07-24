@@ -22,6 +22,16 @@ class Game
 
   def assert(demes)
     case demes.sort
+    when PINZORO
+    when NIZORO
+    when SANZORO
+    when YONZORO
+    when GOZORO
+    when ROKUZORO
+    when HIFUMI
+    when SHIGORO
+    else
+
     end
   end
 end
