@@ -44,7 +44,7 @@ class Game
       if nokorideme == 1
         return "deme1"
       elsif nokorideme == 2
-        return "deme2" 
+        return "deme2"
       elsif nokorideme == 3
         return "deme3"
       elsif nokorideme == 4
@@ -56,11 +56,6 @@ class Game
       else
         "lose"
       end
-
-
     end
   end
 end
-
-game = Game.new
-game.main
