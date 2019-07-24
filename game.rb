@@ -11,7 +11,8 @@ class Game
   SHIGORO = [4, 5, 6]
 
   def main
-    puts roll
+    result = roll
+    asset(result)
   end
 
   def roll
@@ -23,15 +24,26 @@ class Game
   def assert(demes)
     case demes.sort
     when PINZORO
+      return "win"
     when NIZORO
+      return "win"
     when SANZORO
+      return "win"
     when YONZORO
+      return "win"
     when GOZORO
+      return "win"
     when ROKUZORO
+      return "win"
     when HIFUMI
+      return "win"
     when SHIGORO
+      return "loose"
     else
-      
+      deme = demes.combination(2).select{|a,b| a == b}.flatten.first
+      if deme == 1
+        return "loose"
+      else
       if demes.uniq.size == 2
       end
     end
